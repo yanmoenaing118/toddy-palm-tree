@@ -1,0 +1,20 @@
+{
+  "name": "toddy-palm-tree",
+  "version": "1.0.0",
+  "description": "About the toddy palm tree in Myanmar",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "author": "Yan Moe Naing",
+  "license": "ISC",
+  "dependencies": {
+    "next": "^10.0.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-reveal": "^1.2.2",
+    "sass": "^1.29.0"
+  }
+}

@@ -1,0 +1,103 @@
+/* Mobile fist */
+
+.Hero {
+  grid-column: 2 / -2;
+  grid-row: 2 / span 1;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+  position: relative;
+}
+
+.TextBox {
+  grid-column: 1 / span 1;
+  // background-color: #efd;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20rem;
+  margin-left: 5.5rem;
+
+  h1 {
+    font-size: 8rem;
+    color: darken(#5aba3d, 10%);
+    margin-bottom: 3rem;
+    line-height: 11.8rem;
+    width: 100%;
+  }
+
+  p {
+    font-size: 2.4rem;
+    line-height: 5.848rem;
+    color: var(--primary-color);
+    width: 80%;
+    position: relative;
+
+    a,
+    a:link,
+    a:active {
+      margin-left: 1rem;
+      font-size: 2.8rem;
+      font-weight: bold;
+      position: relative;
+      color: var(--primary-color);
+      cursor: pointer;
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -0.5rem;
+        left: 0;
+        width: 100%;
+        height: 5px;
+        background-color: var(--primary-color);
+        transform: scale(0);
+        transition: transform 0.1s;
+        transform-origin: center;
+      }
+
+      &:hover::before {
+        transform: scale(1);
+      }
+    }
+  }
+}
+
+.Circle {
+  position: absolute;
+  width: 800px;
+  height: 500px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+
+  &_Left {
+    left: 0;
+    bottom: -45rem;
+  }
+
+  &_Middle {
+    left: 25%;
+    bottom: -35rem;
+  }
+
+  &_Right {
+    right: 0;
+    bottom: -40rem;
+  }
+}
+
+.Trees {
+  grid-column: 2 / -1;
+  position: relative;
+}
+
+.Tree {
+  position: absolute;
+  &_Left {
+    left: 35%;
+    bottom: 0;
+  }
+
+  &_Right {
+    right: 14rem;
+    bottom: 6rem;
+  }
+}

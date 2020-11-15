@@ -1,0 +1,5 @@
+.Layout {
+  display: grid;
+  grid-template-columns: 6rem repeat(auto-fill, minmax(15rem, 1fr)) 6rem;
+  grid-template-rows: 70px calc(100vh - 70px);
+}
