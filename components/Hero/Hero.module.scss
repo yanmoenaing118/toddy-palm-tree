@@ -1,4 +1,4 @@
-/* Mobile fist */
+@import "./../../styles/mixins";
 
 .Hero {
   grid-column: 2 / -2;
@@ -7,6 +7,13 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
   position: relative;
+
+  @include respond-to(mobile) {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .TextBox {
@@ -23,6 +30,15 @@
     margin-bottom: 3rem;
     line-height: 11.8rem;
     width: 100%;
+
+    @include respond-to(mobile) {
+      font-size: 2.6rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 3.8rem;
+      letter-spacing: 0.1rem;
+      text-align: center;
+    }
   }
 
   p {
@@ -57,7 +73,33 @@
       &:hover::before {
         transform: scale(1);
       }
+
+      @include respond-to(mobile) {
+        font-size: 1.8rem;
+
+        line-height: 4.2rem;
+
+        text-align: center;
+      }
     }
+
+    @include respond-to(mobile) {
+      font-family: Padauk;
+      font-size: 1.5rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 33px;
+      letter-spacing: 0em;
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+  @include respond-to(mobile) {
+    align-items: center;
+    margin-top: 5rem;
+    margin-left: 0;
+    padding: 3rem;
   }
 }
 
@@ -71,22 +113,45 @@
   &_Left {
     left: 0;
     bottom: -45rem;
+    @include respond-to(mobile) {
+      bottom: -10.7rem;
+    }
   }
 
   &_Middle {
     left: 25%;
     bottom: -35rem;
+    @include respond-to(mobile) {
+      bottom: -8.3rem;
+    }
   }
 
   &_Right {
     right: 0;
     bottom: -40rem;
+    @include respond-to(mobile) {
+      bottom: -10.8rem;
+    }
+  }
+
+  @include respond-to(mobile) {
+    width: 23rem;
+    height: 14.7rem;
   }
 }
 
 .Trees {
   grid-column: 2 / -1;
   position: relative;
+
+  @include respond-to(mobile) {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 100%;
+    height: 80vh;
+    transform: translateX(-50%);
+  }
 }
 
 .Tree {
@@ -99,5 +164,14 @@
   &_Right {
     right: 14rem;
     bottom: 6rem;
+
+    @include respond-to(mobile) {
+      right: 5rem;
+      bottom: 0;
+    }
+  }
+
+  @include respond-to(mobile) {
+    width: 22%;
   }
 }

@@ -9,13 +9,13 @@
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid rgba(#000, 0.1);
-  box-shadow: 0 2px 5px rgba(#000, 0.1), 0 3px 5px rgba(#000, 0.1);
+  box-shadow: 0 3px 5px rgba(#000, 0.1);
 
   nav {
     display: flex;
     align-items: center;
     margin-left: auto;
-    display: none;
+    display: block;
     grid-column: 6 / -3;
     margin-right: 11rem;
 
@@ -48,21 +48,25 @@
       }
     }
 
-    @include respond-to(laptop) {
-      display: block;
+    @include respond-to(mobile) {
+      display: none;
     }
   }
 }
 
 .Logo {
   margin: 0 0 0 11rem;
+
+  @include respond-to(mobile) {
+    margin: 0 0 0 2rem;
+  }
 }
 
 .Menu {
-  margin-right: 10rem;
-  display: block;
+  display: none;
 
-  @include respond-to(laptop) {
-    display: none;
+  @include respond-to(mobile) {
+    display: block;
+    margin-right: 2rem;
   }
 }

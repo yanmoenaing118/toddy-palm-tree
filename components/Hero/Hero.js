@@ -9,7 +9,7 @@ export default function Hero(props) {
     <section className={`${styles.Hero}`}>
       <div className={styles.TextBox}>
         <Fade delay={500} bottom>
-          <h1>ထန်းပင်ထွက်ပစ္စည်းများကို မှာယူလိုက်ပါ</h1>
+          <h1>ထန်းပင်ထွက်ပစ္စည်းများကိုမှာယူလိုက်ပါ</h1>
 
           <p>
             မြန်မာ့ရိုးရာစစ်စစ် ထန်းပင်ထွက်ပစ္စည်း ကိုမှသုံးစွဲလိုသူများအတွက်

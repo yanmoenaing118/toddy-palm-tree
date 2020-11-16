@@ -1,23 +1,17 @@
 $laptop: 960px;
-$large-desktop: 1200px;
+
 $tablet: 768px;
-$handhelds-landscape: 1024px;
-$mobile: 640px;
-$mobile-landscape: 480px;
+
+$mobile: 480px;
 
 @mixin respond-to($media) {
-  @if $media == largeDesktop {
-    @media only screen and (min-width: $large-desktop) {
-      @content;
-    }
-  }
   @if $media == laptop {
-    @media only screen and (min-width: $laptop) {
+    @media only screen and (max-width: $laptop) {
       @content;
     }
   }
   @if $media == tablet {
-    @media only screen and (min-width: $tablet) {
+    @media only screen and (max-width: $tablet) {
       @content;
     }
   }
